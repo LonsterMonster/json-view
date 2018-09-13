@@ -1,11 +1,10 @@
 <?PHP
-$id1 = "76561198087092729";//Steam Id HEre
-$query = "http://localhost:591/marketwh.tk/Profiles/".$id1."/inventory/json/440/2/prices.json";//Prices .json of items want to sell
+$query = "prices.json";//Prices .json of items want to sell
 $json = @file_get_contents($query);
 $data = json_decode($json, true);
 $prices = $data["rgPrice"];
 
-$id2 = "76561198076819824";
+$id2 = "";//Your steam id here
 $query = "http://steamcommunity.com/profiles/".$id2."/inventory/json/440/2/";//Invetnroy fetch
 $json = @file_get_contents($query);
 $data = json_decode($json, true);
